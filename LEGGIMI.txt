@@ -1,0 +1,10 @@
+Sostituisci su GitHub:
+1. index.html
+2. aggiungi nella cartella assets il file logo-palazzo-chigi-v2.png
+3. lascia anche marco-marocco.jpg
+
+Il nome del logo è cambiato apposta per evitare la cache del browser.
+Dopo il caricamento attendi circa 1 minuto e apri:
+https://marcomarrocco118.github.io/marrocco/?v=2
+
+Se vedi ancora la versione precedente, usa Ctrl+F5 oppure una finestra anonima.
