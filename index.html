@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071d58">
+  <meta name="description" content="Contatti di Marco Marrocco">
+  <title>Marco Marrocco | Contatti</title>
+
+  <meta property="og:title" content="Marco Marrocco | Contatti">
+  <meta property="og:description" content="Pagina personale di contatto">
+  <meta property="og:image" content="assets/marco-marocco.jpg">
+
+  <style>
+    :root {
+      --navy: #071d58;
+      --navy-2: #183678;
+      --ink: #18202c;
+      --muted: #647083;
+      --line: #dfe4ec;
+      --paper: #ffffff;
+      --bg: #eef1f5;
+      --green: #008c45;
+      --red: #cd212a;
+      --shadow: 0 22px 65px rgba(7, 29, 88, .13);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 50% -20%, rgba(24, 54, 120, .13), transparent 42%),
+        linear-gradient(180deg, #f8f9fb 0%, var(--bg) 100%);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: min(100%, 690px);
+      margin: 0 auto;
+      min-height: 100vh;
+      background: var(--paper);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .top-rule {
+      height: 8px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .top-rule span:nth-child(1) { background: var(--green); }
+    .top-rule span:nth-child(2) { background: #fff; border-bottom: 1px solid #eceff3; }
+    .top-rule span:nth-child(3) { background: var(--red); }
+
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 30px 24px 36px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.99)),
+        url("assets/logo-palazzo-chigi.png") center 45% / 430px auto no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -70px;
+      height: 155px;
+      border-radius: 50% 50% 0 0;
+      border-top: 1px solid rgba(7,29,88,.10);
+      box-shadow:
+        0 -12px 0 rgba(7,29,88,.018),
+        0 -25px 0 rgba(7,29,88,.014),
+        0 -39px 0 rgba(7,29,88,.010);
+      pointer-events: none;
+    }
+
+    .seal {
+      width: min(270px, 72vw);
+      height: auto;
+      margin: 0 auto 18px;
+      display: block;
+      filter: drop-shadow(0 7px 12px rgba(7,29,88,.08));
+    }
+
+    .avatar-wrap {
+      width: 142px;
+      height: 142px;
+      margin: 0 auto 20px;
+      padding: 5px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), #fff 48%, var(--red));
+      box-shadow: 0 12px 30px rgba(7,29,88,.18);
+      position: relative;
+      z-index: 2;
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      border: 4px solid #fff;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 7vw, 48px);
+      font-weight: 500;
+      letter-spacing: .02em;
+      line-height: 1.05;
+    }
+
+    .role {
+      margin: 11px auto 0;
+      max-width: 520px;
+      color: var(--navy-2);
+      font-size: 17px;
+      line-height: 1.45;
+      font-weight: 550;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      margin: 18px auto 0;
+      color: var(--navy);
+      width: min(340px, 82%);
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, transparent, var(--navy));
+    }
+    .ornament::after { background: linear-gradient(90deg, var(--navy), transparent); }
+    .ornament span { font-size: 20px; }
+
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      padding: 0 22px 28px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .action {
+      min-height: 82px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: #fff;
+      color: var(--navy);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 9px 22px rgba(7,29,88,.06);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      cursor: pointer;
+    }
+
+    .action:hover {
+      transform: translateY(-2px);
+      border-color: rgba(7,29,88,.30);
+      box-shadow: 0 13px 28px rgba(7,29,88,.10);
+    }
+
+    .action svg { width: 25px; height: 25px; fill: currentColor; }
+
+    .content {
+      padding: 4px 22px 40px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 14px 35px rgba(7,29,88,.07);
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: 52px 1fr 28px;
+      gap: 13px;
+      align-items: center;
+      min-height: 92px;
+      padding: 17px 18px;
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 1px solid var(--line);
+      transition: background .15s ease;
+    }
+
+    .contact-row:last-child { border-bottom: 0; }
+    .contact-row:hover { background: #f8f9fc; }
+
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      background: #eef2f9;
+    }
+
+    .icon-box svg { width: 24px; height: 24px; fill: currentColor; }
+
+    .label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .value {
+      display: block;
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .chevron {
+      color: #a8b0bd;
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .map-link .value { line-height: 1.5; }
+
+    .footer {
+      padding: 32px 22px calc(30px + env(safe-area-inset-bottom));
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-logo {
+      width: 105px;
+      opacity: .22;
+      margin-bottom: 12px;
+    }
+
+    .disclaimer {
+      margin: 10px auto 0;
+      max-width: 500px;
+      font-size: 11px;
+    }
+
+    .bottom-tricolor {
+      height: 7px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .bottom-tricolor span:nth-child(1) { background: var(--green); }
+    .bottom-tricolor span:nth-child(2) { background: white; border-top: 1px solid #eceff3; }
+    .bottom-tricolor span:nth-child(3) { background: var(--red); }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 26px;
+      transform: translate(-50%, 18px);
+      background: #101828;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.22);
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: .22s ease;
+      z-index: 99;
+      white-space: nowrap;
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+    @media (max-width: 430px) {
+      .hero { padding-inline: 18px; }
+      .actions { padding-inline: 14px; gap: 7px; }
+      .action { min-height: 76px; border-radius: 14px; font-size: 11px; }
+      .content { padding-inline: 14px; }
+      .contact-row { padding-inline: 14px; }
+      .role { font-size: 15px; }
+    }
+
+    @media (min-width: 691px) {
+      body { padding: 28px 0; }
+      .page { min-height: calc(100vh - 56px); border-radius: 28px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <div class="top-rule" aria-hidden="true"><span></span><span></span><span></span></div>
+
+    <section class="hero">
+      <img class="seal" src="assets/logo-palazzo-chigi.png" alt="Logo Palazzo Chigi">
+      <div class="avatar-wrap">
+        <img class="avatar" src="assets/marco-marocco.jpg" alt="Foto profilo di Marco Marrocco">
+      </div>
+
+      <h1>Marco Marrocco</h1>
+      <p class="role">Presidenza del Consiglio dei Ministri</p>
+
+      <div class="ornament" aria-hidden="true"><span>◆</span></div>
+    </section>
+
+    <section class="actions" aria-label="Azioni rapide">
+      <a class="action" href="tel:+393311706528" aria-label="Chiama Marco Marrocco">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.4 2.6.7 4 .7.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.3 21.6 2.4 13.7 2.4 4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.7.7 4 .1.4 0 .9-.3 1.2l-2.1 1.6z"/></svg>
+        Chiama
+      </a>
+
+      <a class="action" href="mailto:m.marocco@governo.it" aria-label="Invia email">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Email
+      </a>
+
+      <button class="action" type="button" onclick="sharePage()" aria-label="Condividi pagina">
+        <svg viewBox="0 0 24 24"><path d="M18 16.1c-.8 0-1.5.3-2 .8L8.9 12.7c.1-.2.1-.5.1-.7s0-.5-.1-.7L16 7.1c.5.5 1.2.8 2 .8a3 3 0 1 0-3-3c0 .2 0 .5.1.7L8 9.8a3 3 0 1 0 0 4.4l7.1 4.2c-.1.2-.1.4-.1.7a3 3 0 1 0 3-3z"/></svg>
+        Condividi
+      </button>
+
+      <button class="action" type="button" onclick="downloadVCard()" aria-label="Salva contatto">
+        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        Salva
+      </button>
+    </section>
+
+    <section class="content">
+      <div class="card">
+        <a class="contact-row" href="tel:+393311706528">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.4 2.6.7 4 .7.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.3 21.6 2.4 13.7 2.4 4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.7.7 4 .1.4 0 .9-.3 1.2l-2.1 1.6z"/></svg>
+          </div>
+          <div>
+            <span class="label">Telefono</span>
+            <span class="value">+39 331 170 6528</span>
+          </div>
+          <span class="chevron">›</span>
+        </a>
+
+        <a class="contact-row" href="mailto:m.marocco@governo.it">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div>
+            <span class="label">Email</span>
+            <span class="value">m.marocco@governo.it</span>
+          </div>
+          <span class="chevron">›</span>
+        </a>
+
+        <a class="contact-row" href="https://www.governo.it" target="_blank" rel="noopener">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-3a15.7 15.7 0 0 0-1.4-3.6A8.1 8.1 0 0 1 18.9 8zM12 4c.8 1.1 1.5 2.4 1.9 4h-3.8c.4-1.6 1.1-2.9 1.9-4zM9.5 4.4A15.7 15.7 0 0 0 8.1 8h-3a8.1 8.1 0 0 1 4.4-3.6zM4.3 10h3.4a16.6 16.6 0 0 0 0 4H4.3a8 8 0 0 1 0-4zm.8 6h3a15.7 15.7 0 0 0 1.4 3.6A8.1 8.1 0 0 1 5.1 16zM12 20c-.8-1.1-1.5-2.4-1.9-4h3.8c-.4 1.6-1.1 2.9-1.9 4zm2.3-6H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4zm.2 5.6a15.7 15.7 0 0 0 1.4-3.6h3a8.1 8.1 0 0 1-4.4 3.6zM16.3 14a16.6 16.6 0 0 0 0-4h3.4a8 8 0 0 1 0 4h-3.4z"/></svg>
+          </div>
+          <div>
+            <span class="label">Sito web</span>
+            <span class="value">www.governo.it</span>
+          </div>
+          <span class="chevron">›</span>
+        </a>
+
+        <a class="contact-row map-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Colonna+370,+00187+Roma" target="_blank" rel="noopener">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+          </div>
+          <div>
+            <span class="label">Indirizzo</span>
+            <span class="value">Piazza Colonna, 370<br>00187 Roma, Italia</span>
+          </div>
+          <span class="chevron">›</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <img class="footer-logo" src="assets/logo-palazzo-chigi.png" alt="" aria-hidden="true">
+      <div>Pagina personale di contatto di Marco Marrocco.</div>
+      <div class="disclaimer">Questa pagina non costituisce un sito istituzionale e non sostituisce le comunicazioni pubblicate sui domini ufficiali della Presidenza del Consiglio dei Ministri.</div>
+    </footer>
+
+    <div class="bottom-tricolor" aria-hidden="true"><span></span><span></span><span></span></div>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => toast.classList.remove("show"), 2300);
+    }
+
+    async function sharePage() {
+      const shareData = {
+        title: "Marco Marrocco",
+        text: "Contatti di Marco Marrocco",
+        url: window.location.href
+      };
+
+      try {
+        if (navigator.share) {
+          await navigator.share(shareData);
+        } else {
+          await navigator.clipboard.writeText(window.location.href);
+          showToast("Link copiato negli appunti");
+        }
+      } catch (error) {
+        if (error.name !== "AbortError") showToast("Condivisione non disponibile");
+      }
+    }
+
+    function downloadVCard() {
+      const vcard = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "N:Marrocco;Marco;;;",
+        "FN:Marco Marrocco",
+        "ORG:Presidenza del Consiglio dei Ministri",
+        "TEL;TYPE=CELL:+393311706528",
+        "EMAIL;TYPE=INTERNET:m.marocco@governo.it",
+        "URL:https://www.governo.it",
+        "ADR;TYPE=WORK:;;Piazza Colonna 370;Roma;RM;00187;Italia",
+        "PHOTO;VALUE=URI:" + new URL("assets/marco-marocco.jpg", window.location.href).href,
+        "END:VCARD"
+      ].join("\r\n");
+
+      const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Marco-Marrocco.vcf";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+      showToast("Contatto pronto per il salvataggio");
+    }
+  </script>
+</body>
+</html>

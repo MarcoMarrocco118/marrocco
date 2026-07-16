@@ -1,0 +1,16 @@
+SITO NFC – MARCO MARROCCO
+
+Caricamento su GitHub Pages:
+1. Crea un nuovo repository pubblico su GitHub.
+2. Carica nella cartella principale:
+   - index.html
+   - la cartella assets con le due immagini.
+3. Apri Settings > Pages.
+4. In “Build and deployment” seleziona “Deploy from a branch”.
+5. Seleziona il branch main e la cartella /root, quindi salva.
+6. Dopo alcuni minuti GitHub mostrerà l’indirizzo pubblico da scrivere sul tag NFC.
+
+IMPORTANTE:
+- Non modificare i nomi o il percorso dei file nella cartella assets.
+- Per aggiornare i dati, modifica index.html.
+- La pagina include un avviso che chiarisce che si tratta di una pagina personale di contatto e non di un sito istituzionale.
