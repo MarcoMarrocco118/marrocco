@@ -60,10 +60,8 @@
     .hero {
       position: relative;
       text-align: center;
-      padding: 30px 24px 36px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.99)),
-        url("assets/logo-palazzo-chigi.png") center 45% / 430px auto no-repeat;
+      padding: 34px 24px 40px;
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 72%, #fbfcfe 100%);
     }
 
     .hero::after {
@@ -80,18 +78,32 @@
       pointer-events: none;
     }
 
+    .seal-wrap {
+      width: 100%;
+      min-height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 3;
+    }
+
     .seal {
-      width: min(270px, 72vw);
+      width: min(330px, 78vw);
+      max-height: 205px;
       height: auto;
-      margin: 0 auto 18px;
+      object-fit: contain;
+      object-position: center;
       display: block;
+      margin: 0;
       filter: drop-shadow(0 7px 12px rgba(7,29,88,.08));
     }
 
     .avatar-wrap {
       width: 142px;
       height: 142px;
-      margin: 0 auto 20px;
+      margin: 0 auto 22px;
       padding: 5px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--green), #fff 48%, var(--red));
@@ -304,7 +316,9 @@
     .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
     @media (max-width: 430px) {
-      .hero { padding-inline: 18px; }
+      .hero { padding: 26px 18px 34px; }
+      .seal-wrap { min-height: 170px; margin-bottom: 20px; }
+      .seal { width: min(285px, 82vw); max-height: 165px; }
       .actions { padding-inline: 14px; gap: 7px; }
       .action { min-height: 76px; border-radius: 14px; font-size: 11px; }
       .content { padding-inline: 14px; }
@@ -324,7 +338,9 @@
     <div class="top-rule" aria-hidden="true"><span></span><span></span><span></span></div>
 
     <section class="hero">
-      <img class="seal" src="assets/logo-palazzo-chigi.png" alt="Logo Palazzo Chigi">
+      <div class="seal-wrap">
+        <img class="seal" src="assets/logo-palazzo-chigi.png" alt="Logo Palazzo Chigi">
+      </div>
       <div class="avatar-wrap">
         <img class="avatar" src="assets/marco-marocco.jpg" alt="Foto profilo di Marco Marrocco">
       </div>
